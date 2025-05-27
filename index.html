@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CostR</title> <!-- Updated App Name -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-primary-DEFAULT: #A95DF9; /* New Primary */
+        --color-primary-light: #C792FA;   /* Lighter Violet */
+        --color-primary-dark: #8A3FD0;    /* Darker Violet */
+        --color-secondary-DEFAULT: #5C75FA; /* New Secondary */
+        --color-secondary-light: #899FFA; /* Lighter Blue */
+        --color-secondary-dark: #3D57D0; /* Darker Blue */
+
+        --color-background: #F8F7FC; /* Slightly lavender-tinted off-white */
+        --color-surface: #FFFFFF;
+        --color-onPrimary: #FFFFFF;
+        --color-onSecondary: #FFFFFF;
+        --color-onBackground: #1B1A1F; /* Darker for better contrast with Lexend */
+        --color-onSurface: #1B1A1F; 
+        --color-danger: #EF4444; /* red-500 */
+      }
+      /* Basic scrollbar styling for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-background);
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary-light);
+        border-radius: 10px;
+        border: 2px solid var(--color-background);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-primary-DEFAULT);
+      }
+
+      .scrollbar-thin::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-track {
+        background: var(--color-background);
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary-light);
+        border-radius: 10px;
+        border: 2px solid var(--color-surface);
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-primary-DEFAULT);
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn { 
+        animation: fadeIn 0.5s ease-out forwards; 
+      }
+
+      /* Text gradient class */
+      .text-gradient-animated {
+        background: linear-gradient(to bottom, var(--color-primary-DEFAULT), var(--color-secondary-DEFAULT));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      body {
+        font-family: 'Lexend', sans-serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Lexend', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: 'var(--color-primary-DEFAULT)',
+                light: 'var(--color-primary-light)',
+                dark: 'var(--color-primary-dark)',
+              },
+              secondary: {
+                DEFAULT: 'var(--color-secondary-DEFAULT)',
+                light: 'var(--color-secondary-light)',
+                dark: 'var(--color-secondary-dark)',
+              },
+              background: 'var(--color-background)',
+              surface: 'var(--color-surface)',
+              onPrimary: 'var(--color-onPrimary)',
+              onSecondary: 'var(--color-onSecondary)',
+              onBackground: 'var(--color-onBackground)',
+              onSurface: 'var(--color-onSurface)',
+              danger: 'var(--color-danger)',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.417.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-onBackground">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>

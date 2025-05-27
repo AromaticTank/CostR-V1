@@ -1,0 +1,6 @@
+{
+  "name": "Copy of Mobile Invoice & Quote Generator",
+  "description": "A simple invoice and quotation generator app that allows users to manage and share their invoices and quotations from their mobile phone. Data is stored locally in the browser.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
